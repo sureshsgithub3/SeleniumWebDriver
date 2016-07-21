@@ -1,6 +1,13 @@
 package DropDowns_6;
 
 import java.util.ArrayList;
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -27,8 +34,8 @@ public class TwoDropDownsComparsion {
 		for(WebElement ele:auto){
 			System.out.println(ele.getText());
 			
-			if(ele.getText().contains("Hyderabad")){
-				System.out.println("Test Pass");
+			if(ele.getText().equalsIgnoreCase("Hyderabad")){
+				System.out.println("Test fail");
 			}else
 				System.out.println("Test pass");
 		}
