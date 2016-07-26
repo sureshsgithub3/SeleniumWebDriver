@@ -62,7 +62,7 @@ public class MakeMytrip {
 		List<Integer> prices = new ArrayList<Integer>();
 		for(WebElement ele : ps){
 			hotelPrice.add(ele.getText().split(" ")[1]);
-			//System.out.println(ele.getText());
+			System.out.println(ele.getText());
 		}
 		for(String p : hotelPrice){
 			prices.add(Integer.parseInt(p));
@@ -81,7 +81,7 @@ public class MakeMytrip {
 		
 		
 		
-		driver.quit();
+		//driver.quit();
 
 	}
 
