@@ -26,8 +26,9 @@ public class ShoeShopeLists {
 		
 		for(int i=1;i<=s1;i++){
 			
+		  //storing types(Women/Men/kids) in webElement
 			WebElement ele=driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li["+i+"]/a"));
-			
+			//priting type
 			System.out.println(ele.getText());
 			System.out.println("=================>>><<<<<==========");
 			
@@ -54,6 +55,7 @@ public class ShoeShopeLists {
 			
 			
 		}
+		driver.close();
 		
 		
 		
