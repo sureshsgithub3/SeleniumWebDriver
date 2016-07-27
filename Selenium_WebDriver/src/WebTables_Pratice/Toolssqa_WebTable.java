@@ -27,18 +27,29 @@ public class Toolssqa_WebTable {
 		int size2=table_data.size();
 		System.out.println(size2);
 		
-		
+		int rowno=0;
 		
 		for(int row=0;row<size2;row++){
+			System.out.println(rowno++);
 			
 			List<WebElement> table_data_columns=table_data.get(row).findElements(By.tagName("td"));
-			int size4=table_data_columns.size();
-			System.out.println("size 4"+size4);
+			// for th tags it row should be 0 because a table can have only one row of th rows
+			List<WebElement> table_heading_columns=table_headings.get(0).findElements(By.tagName("th"));
+			
+			for(int columns =0;columns<table_data_columns.size();columns++){
+				String celltext=table_data_columns.get(columns).getText();
+				String HeadCelltext=table_heading_columns.get(columns).getText();
+				System.out.println(HeadCelltext+" "+celltext);
+			}
+			System.out.println("-----------------------");
 			
 			
-			List<WebElement> table_heading_columns=table_headings.get(row).findElements(By.tagName("th"));
-			int size3=table_heading_columns.size();
-			System.out.println("size3 :"+size3);
+			
+			
+			
+			
+			
+			
 			
 			
 		}

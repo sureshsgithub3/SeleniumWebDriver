@@ -23,7 +23,9 @@ public class RediffMoney2 {
 		System.out.println(stck_details.size());
 		
 		for(int rows=0;rows<stck_details.size();rows++){
-			List<WebElement>Stck_heading=headings.get(rows).findElements(By.tagName("th"));
+			// for th tags it row should be 0 because a table can have only one row of th rows
+			List<WebElement>Stck_heading=headings.get(0).findElements(By.tagName("th"));
+			
 			List<WebElement>Stock_columns=stck_details.get(rows).findElements(By.tagName("td"));
 			
 			for(int columns=0;columns<Stock_columns.size();columns++){

@@ -19,7 +19,8 @@ public class CricBuzz_using_collections {
 		
 		
 		List<WebElement> Scorecard=driver.findElements(By.xpath(".//*[@id='innings_1']/div[1]/div"));
-		//int rowscount=rows.size();
+		int rowscount=Scorecard.size();
+		System.out.println("RowCount :"+rowscount);
 		
 		for(WebElement batsmanScorecard:Scorecard){
 			System.out.print(batsmanScorecard.getText());
