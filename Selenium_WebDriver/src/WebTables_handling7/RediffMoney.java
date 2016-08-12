@@ -27,15 +27,18 @@ public class RediffMoney {
 			for(int columns=0;columns<columnscount;columns++){
 				
 				String celltext=tablecolumnsdata.get(columns).getText();
-				System.out.print(celltext);
+				System.out.print(celltext + " \t");
 				
 				
 			}
+			
 			System.out.println("----------------------------------------");
 			
 			
 		}
+		
 
 	}
 
 }
+
